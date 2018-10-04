@@ -34,7 +34,7 @@ div img {
 .row {
   width: 100%;
   display: table;
-  margin: 0;
+  margin: 4% 0 4% 0;
   padding: 0;
 }
 .row::after {
@@ -47,11 +47,17 @@ div img {
   width: 92%;
   margin-left: 4%;
 }
-.cell-25 {
+.cell-25-all {
   background-color: mediumaquamarine;
+}
+.cell-25-part {
+  background-color: indianred;
 }
 .cell-50 {
   background-color: blanchedalmond;
+}
+.cell-75 {
+  background-color: orangered;
 }
 .cell-100 {
   background-color: plum;
@@ -59,41 +65,34 @@ div img {
 
 /* Mobile Landscape Screen Sizes */
 @media only screen and (min-width: 480px) {
-  .cell-25 {
-    width: 44%;
+  [class*="cell-"] {
+    margin-right: 0;
     float: left;
-    margin-left: 4%;
-    background-color: mediumaquamarine;
+    min-height: 1px;
   }
+  .cell-25-all,
   .cell-50 {
     width: 44%;
-    float: left;
-    margin-left: 4%;
-    background-color: blanchedalmond;
   }
+  .cell-25-part,
+  .cell-75,
   .cell-100 {
     width: 92%;
-    margin-left: 4%;
-    background-color: plum;
   }
 }
 /* Desktop screen Sizes */
 @media only screen and (min-width: 768px) {
-  .cell-25 {
+  .cell-25-all,
+  .cell-25-part {
     width: 20%;
-    float: left;
-    margin-left: 4%;
-    background-color: mediumaquamarine;
   }
   .cell-50 {
     width: 44%;
-    float: left;
-    margin-left: 4%;
-    background-color: blanchedalmond;
+  }
+  .cell-75 {
+    width: 68%;
   }
   .cell-100 {
     width: 92%;
-    margin-left: 4%;
-    background-color: plum;
   }
 }
